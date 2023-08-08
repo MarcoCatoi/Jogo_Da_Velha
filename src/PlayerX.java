@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class PlayerX {
 	final String name;
-	int col, lin;
+	int lin, col;
 	
 	public PlayerX() {
 		@SuppressWarnings("resource")
@@ -15,6 +15,7 @@ public class PlayerX {
 	public void Alg() {
 		@SuppressWarnings("resource")
 		Scanner tc = new Scanner(System.in);
+		
 		char array[][] = FrameHash.getMold();
 		
 		try{
@@ -23,8 +24,8 @@ public class PlayerX {
 			System.out.print(name+" digite qual coluna voce pretende colocar a 'X': ");
 			col = tc.nextInt();
 			if ((FrameHash.getMold()[lin-1][col-1] != 'X') && (FrameHash.getMold()[lin-1][col-1]!='O')) {
-					array[lin-1][col-1] = 'X';
-					FrameHash.setMold(array);
+				array[lin-1][col-1] = 'X';
+				FrameHash.setMold(array);
 			}else {
 				System.out.println("Voce esta tentando preencher um espaço ocupado. Tente de novo!");
 				this.Alg();

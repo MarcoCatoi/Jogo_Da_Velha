@@ -4,15 +4,14 @@ import java.util.Scanner;
 public class PlayerO {
 	final String name;
 	int lin, col;
-	
-	
-	
+		
 	public PlayerO() {
 		@SuppressWarnings("resource")
 		Scanner tc = new Scanner(System.in);
 			System.out.print("Jogador O escreva seu name: ");
 			this.name = tc.nextLine();
 	}
+	
 	public void Alg() {
 		@SuppressWarnings("resource")
 		Scanner tc = new Scanner(System.in);
